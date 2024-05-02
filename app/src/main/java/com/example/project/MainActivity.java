@@ -34,9 +34,6 @@ public class MainActivity extends AppCompatActivity {
     }
     public void onResume() {
         super.onResume();
-        /*cannot set the preference reference name as its instructed in the Storage - preferences file/folder (canvas/lenasys)
-        in SecondActivity, getPreferences() want only one parameter
-         */
         myPreferenceRef = getSharedPreferences("myPreferences", MODE_PRIVATE);
         myPreferenceEditor = myPreferenceRef.edit();
 
