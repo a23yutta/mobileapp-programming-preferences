@@ -33,7 +33,7 @@ public class SecondActivity extends AppCompatActivity {
         saveEditedTextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SharedPreferences myPreferenceRef = getPreferences(MODE_PRIVATE);
+                SharedPreferences myPreferenceRef = getSharedPreferences("myPreferences", MODE_PRIVATE);
                 SharedPreferences.Editor myPreferenceEditor = myPreferenceRef.edit();
                 myPreferenceEditor.putString("myPreferenceString", editText.getText().toString());
                 myPreferenceEditor.apply();
